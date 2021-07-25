@@ -144,11 +144,11 @@ namespace Mail_sending_service
             smtp.Port = 3535;
             smtp.Send(mailMessage); //sending Email  
         }
-        private void ServiceTimer_Tick(object sender, System.Timers.ElapsedEventArgs e)
+        private void ServiceTimer_Tick(object sender,ElapsedEventArgs e)
         {
             string Msg = "Hi ! This is DailyMailSchedulerService mail.";//whatever msg u want to send write here.  
                                                                         // Here you can write the   
-            SendEmail("manishki007@gmail.com", "abc@live.com", "manishki@live.com", "Daily Report of DailyMailSchedulerService on " + DateTime.Now.ToString("dd-MMM-yyyy"), Msg);
+            SendEmail("---To mail---", "----cc mail----", "---bcc mail----", "Daily Report of DailyMailSchedulerService on " + DateTime.Now.ToString("dd-MMM-yyyy"), Msg);
 
             if (getCallType == 1)
             {
